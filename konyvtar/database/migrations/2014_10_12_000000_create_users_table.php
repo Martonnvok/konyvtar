@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\User;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -20,6 +21,10 @@ return new class extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
+
+        User::create(['name' => 'IshowSpeed', 'email' => 'ronaldobether@gmail.com', 'password'=> 'THISISRONALDHO']);
+        User::create(['name' => 'MC Isti', 'email' => 'kuldjetekpenzt@gmail.com', 'password'=> 'jelszó']);
+        User::create(['name' => 'Cristiano Ronaldo', 'email' => 'ilovemessi@gmail.com', 'password'=> 'SUIIIIIIIIIIIIIIIIIII']);
     }
 
     /**

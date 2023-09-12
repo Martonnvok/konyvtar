@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Book;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -19,6 +20,10 @@ return new class extends Migration
             $table->timestamps();
             
         });
+
+        Book::create(['author' => 'Szervkereskedelem', 'title' => 'MC Isti írta így ingyen oda adjuk', 'pieces'=> 0]);
+        Book::create(['author' => 'Ronaldo is Better', 'title' => 'Messi is **** RONALDO IS BETTER: IshowwSpeed', 'pieces'=> 10000]);
+        Book::create(['author' => 'Hogyan legyél jó NPC ?', 'title' => 'Éetmutatás a könnyű pénz szerzéséhez', 'pieces'=> 2399]);
     }
 
     /**
